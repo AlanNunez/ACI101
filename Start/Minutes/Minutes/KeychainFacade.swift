@@ -9,12 +9,13 @@
 import Foundation
 import Security
 
+public enum KeychainFacadeError: Error {
+    case invalidContent
+    case failure(status: OSStatus)
+}
+
 class KeychainFacade {
     
-    public enum KeychainFacadeError: Error {
-        case invalidContent
-        case failure(status: OSStatus)
-    }
     private func setupQueryDictionary(forKey key: String) -> [String: Any] {
         var queryDictionary: [String: Any] = [kSecClass as String: kSecClassGenericPassword]
         queryDictionary[kSecAttrAccount as String] = key.data(using: .utf8)
