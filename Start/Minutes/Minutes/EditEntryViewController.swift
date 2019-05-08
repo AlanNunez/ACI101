@@ -30,7 +30,7 @@ class EditEntryViewController: UIViewController
         entry?.content = contentTextView.text!
         
         AppDelegate.entries.write(entry!)
-                
+    
         navigationController?.popViewController(animated: true)
     }
 }
