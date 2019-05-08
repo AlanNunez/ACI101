@@ -36,4 +36,45 @@ class KeychainFacade {
             throw KeychainFacadeError.failure(status: status)
         }
     }
+    
+    public func removeString(forKey key: String) throws {
+        guard !key.isEmpty else {
+            print("Key must be valid")
+            throw KeychainFacadeError.invalidContent
+        }
+        
+        let queryDictionary = setupQueryDictionary(forKey: key)
+        let status = SecItemAdd(queryDictionary as CFDictionary, nil)
+        if status != errSecSuccess {
+            throw KeychainFacadeError.failure(status: status)
+        }
+        
+        
+    }
+    public func string(forKey key: String) throws -> String? {
+        guard !key.isEmpty else {
+            print("Key must be valid")
+            throw KeychainFacadeError.invalidContent
+        }
+        
+        
+        var queryDictionary = setupQueryDictionary(forKey: key)
+        queryDictionary[kSecReturnData as String] = kCFBooleanTrue
+        queryDictionary[kSecMatchLimit as String] = kSecMatchLimitOne
+        
+        var data: AnyObject?
+        let status = SecItemCopyMatching(queryDictionary as CFDictionary, &data)
+        
+        guard status == errSecSuccess else {
+            throw KeychainFacadeError.failure(status: status)
+        }
+        
+        var result: String?
+        if let itemData = data as? Data {
+            result = String(data: itemData, encoding: .utf8)
+        } else {
+            result = nil
+        }
+        return result
+    }
 }
