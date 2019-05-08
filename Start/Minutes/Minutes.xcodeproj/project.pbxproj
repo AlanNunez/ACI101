@@ -16,6 +16,7 @@
 		D3AA8CFD20363C2E00222B39 /* EditEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA8CFC20363C2E00222B39 /* EditEntryViewController.swift */; };
 		D3AA8CFF2037552800222B39 /* FileEntryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA8CFE2037552800222B39 /* FileEntryStore.swift */; };
 		E978109F2283107A0044F321 /* UITextField+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = E978109E2283107A0044F321 /* UITextField+Extention.swift */; };
+		E97810A122833A490044F321 /* KeychainFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97810A022833A490044F321 /* KeychainFacade.swift */; };
 		E99F00F522809B4F00982D3B /* MinutesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F00F422809B4F00982D3B /* MinutesTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		D3AA8CFC20363C2E00222B39 /* EditEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntryViewController.swift; sourceTree = "<group>"; };
 		D3AA8CFE2037552800222B39 /* FileEntryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileEntryStore.swift; sourceTree = "<group>"; };
 		E978109E2283107A0044F321 /* UITextField+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extention.swift"; sourceTree = "<group>"; };
+		E97810A022833A490044F321 /* KeychainFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainFacade.swift; sourceTree = "<group>"; };
 		E99F00F222809B4F00982D3B /* MinutesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinutesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99F00F422809B4F00982D3B /* MinutesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutesTests.swift; sourceTree = "<group>"; };
 		E99F00F622809B4F00982D3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				D3AA8CFC20363C2E00222B39 /* EditEntryViewController.swift */,
 				D3AA8CFE2037552800222B39 /* FileEntryStore.swift */,
 				E978109E2283107A0044F321 /* UITextField+Extention.swift */,
+				E97810A022833A490044F321 /* KeychainFacade.swift */,
 			);
 			path = Minutes;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3048F40202E540100D45D7E /* EntriesTableViewController.swift in Sources */,
+				E97810A122833A490044F321 /* KeychainFacade.swift in Sources */,
 				D3048F3A202E2B9B00D45D7E /* Entry.swift in Sources */,
 				D3AA8CFF2037552800222B39 /* FileEntryStore.swift in Sources */,
 				D3048F28202E2B2D00D45D7E /* AppDelegate.swift in Sources */,

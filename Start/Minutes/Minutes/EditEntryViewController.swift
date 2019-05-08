@@ -23,21 +23,9 @@ class EditEntryViewController: UIViewController
         
         titleTextField.text = entry?.title
         contentTextView.text = entry?.content
-        
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationWillResignActive, object: nil, queue: OperationQueue.main) { _ in
-            for view in self.view.subviews {
-                if let textField = view as? UITextField {
-                    textField.text = nil
-                }
-            }
-        }
-    }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(self)
-        
     }
+
     @objc func onSave(_ sender: UIBarButtonItem)
     {
         entry?.title = titleTextField.text!
